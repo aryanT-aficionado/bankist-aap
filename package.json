@@ -1,0 +1,20 @@
+{
+  "name": "bankist-module",
+  "version": "1.0.0",
+  "description": "bankist app",
+  "default": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build":"parcel build index.html --dist-dir ./dist"
+  },
+  "keywords": [
+    "app",
+    "for",
+    "banks"
+  ],
+  "author": "Aryan Tiwari",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.0.1"
+  }
+}
