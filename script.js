@@ -32,9 +32,6 @@ const closeModal = function () {
   overlay.classList.add(`hidden`);
 };
 
-// for (let i = 0; i < btnOpenModal.length; i++) {
-//   btnOpenModal[i].addEventListener(`click`, openModal);
-// }
 
 btnOpenModal.forEach((btn) => btn.addEventListener(`click`, openModal));
 
@@ -83,16 +80,6 @@ btnScrollTo.addEventListener(`click`, function (e) {
 ///////////////////////////////////////////////////////////////////////////
 /////////////////////////////PAGE NAVIGATION
 
-// document.querySelectorAll(`.nav__link`).forEach(function (element) {
-//   element.addEventListener(`click`, function (e) {
-//     e.preventDefault();
-
-//     const id = this.getAttribute(`href`);
-//     console.log(id);
-
-//     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-//   });
-// });
 
 // EVENT DELEGATION
 // 1. Add event listner to common parent element
@@ -111,8 +98,6 @@ document.querySelector(`.nav__links`).addEventListener(`click`, function (e) {
   }
 });
 
-// It will slow down the page
-// tabs.forEach((t) => t.addEventListener(`click`, () => console.log(`TAB `)));
 
 // EVENT DELEGATION
 tabsContainer.addEventListener(`click`, function (e) {
@@ -129,9 +114,6 @@ tabsContainer.addEventListener(`click`, function (e) {
   // Active Tab
   clicked.classList.add(`operations__tab--active`);
 
-  // if (clicked) {
-  //   clicked.classList.add(`operations__tab--active`);
-  // }
 
   // Activate Centent Area
   console.log(clicked.dataset.tab);
@@ -160,17 +142,6 @@ nav.addEventListener(`mouseover`, handleHover.bind(0.5));
 
 nav.addEventListener(`mouseout`, handleHover.bind(1));
 
-// STICKY NAV BAR
-// const initialCords = section1.getBoundingClientRect();
-// console.log(initialCords);
-
-// window.addEventListener(`scroll`, function (e) {
-//   // console.log(window.scrollY);
-
-//   this.window.scrollY > initialCords.top
-//     ? nav.classList.add(`sticky`)
-//     : nav.classList.remove(`sticky`);
-// });
 
 // STICKY NAVIGAITON: INTERSECTION OBSERVER API
 
@@ -256,10 +227,6 @@ const slider = function () {
   let currSlide = 0;
   const maxSlide = slides.length;
 
-  // Test Case
-  // const slider = document.querySelector(`.slider`);
-  // slider.style.transform = `scale(0.4) translateX(-800px)`;
-  // slider.style.overflow = `visible`;
 
   // Functions
   const createDots = function () {
